@@ -31,7 +31,7 @@
             <!-- HTML code for copy -->
             <div>
                 <p style="text-align:left; background-color: #C0C0C0;">
-                    HTML
+                    HTML ...
                     <span style="float:right;">
                         <button style="width: 10px; height: 10px" class="btn btn-link bg-dark" id="button1"
                                 onclick="CopyToClipboard('div {{ item.id }} ')">
@@ -54,7 +54,7 @@
 
                 <div id="div {{ item.id }} ">
                     <div>
-                        {{ item.code }}
+                        {{ item.text }}
                     </div>
                 </div>
 
@@ -71,15 +71,15 @@
 
 
         </div>
-
+    Автор -
+    {% for item_author in item.author %}
+            {{ item_author.username }}
+    {% endfor %}
 
     </div>
-    Автор - {{ item.author }}
+
 
 {% endfor %}
-
-
-
 
 
 
